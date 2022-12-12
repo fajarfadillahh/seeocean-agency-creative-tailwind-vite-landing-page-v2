@@ -19,6 +19,55 @@
     <!-- 🌙 ☀️ -->
   </head>
   <body class="font-text font-reguler">
+    <!-- ===== HEADER SECTION ===== -->
+    <header
+      class="header fixed w-full top-0 left-0 bg-white z-50 transition-all duration-300"
+      id="header"
+    >
+      <div
+        class="header__container container h-24 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="header__logo inline-flex items-center text-[22px] text-slate-900 font-title"
+        >
+          <img
+            src="./src/img/icon.svg"
+            alt=""
+            class="header__logo-icon w-[35px]"
+          />
+          SeeOcean.
+        </a>
+
+        <div class="header__menu" id="header-menu">
+          <ul class="header__list flex flex-col gap-6">
+            <li><a href="#" class="header__link">Home</a></li>
+            <li><a href="#" class="header__link">About</a></li>
+            <li><a href="#" class="header__link">Pricing</a></li>
+            <li><a href="#" class="header__link">Support</a></li>
+          </ul>
+
+          <!-- theme toggle -->
+          <div
+            class="header__theme absolute top-8 right-8 text-[1.5rem] cursor-pointer"
+            id="theme-toggle"
+          >
+            <span class="header__theme-icon" id="themeToggleDarkMode">🌙</span>
+          </div>
+
+          <a href="#" class="header__button button-outline mt-6">Account</a>
+        </div>
+
+        <div
+          class="header__toggle inline-flex text-[1.5rem] text-slate-900 cursor-pointer"
+          id="header-toggle"
+        >
+          <i class="bx bx-grid-alt"></i>
+        </div>
+      </div>
+    </header>
+    <!-- ===== HEADER SECTION ===== -->
+
     <!-- ===== MAIN JS ===== -->
     <script type="module" src="./src/js/main.js"></script>
   </body>
