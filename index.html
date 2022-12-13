@@ -25,7 +25,7 @@
       id="header"
     >
       <div
-        class="header__container container h-24 flex justify-between items-center"
+        class="header__container container h-24 flex justify-between items-center md:relative"
       >
         <a
           href="#"
@@ -39,8 +39,13 @@
           SeeOcean.
         </a>
 
-        <div class="header__menu" id="header-menu">
-          <ul class="header__list flex flex-col gap-6">
+        <div
+          class="header__menu md:flex md:items-center md:gap-6"
+          id="header-menu"
+        >
+          <ul
+            class="header__list flex flex-col gap-6 md:absolute md:flex-row md:left-1/2 md:-translate-x-1/2 md:gap-8"
+          >
             <li><a href="#" class="header__link">Home</a></li>
             <li><a href="#" class="header__link">About</a></li>
             <li><a href="#" class="header__link">Pricing</a></li>
@@ -49,17 +54,19 @@
 
           <!-- theme toggle -->
           <div
-            class="header__theme absolute top-8 right-8 text-[1.5rem] cursor-pointer"
+            class="header__theme absolute top-8 right-8 text-[1.5rem] cursor-pointer md:static"
             id="theme-toggle"
           >
             <span class="header__theme-icon" id="themeToggleDarkMode">🌙</span>
           </div>
 
-          <a href="#" class="header__button button-outline mt-6">Account</a>
+          <a href="#" class="header__button button-outline mt-6 md:mt-0"
+            >Account</a
+          >
         </div>
 
         <div
-          class="header__toggle inline-flex text-[1.5rem] text-slate-900 cursor-pointer"
+          class="header__toggle inline-flex text-[1.5rem] text-slate-900 cursor-pointer md:hidden"
           id="header-toggle"
         >
           <i class="bx bx-grid-alt"></i>
