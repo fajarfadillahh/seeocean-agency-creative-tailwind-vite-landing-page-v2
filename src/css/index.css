@@ -55,3 +55,11 @@
 ::selection {
   @apply bg-rose-500 text-white;
 }
+
+/* ===== ::-WEBKIT-SCROLLBAR ===== */
+::-webkit-scrollbar {
+  @apply w-2 bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[rgba(0,0,0,0.1)] rounded-full hover:bg-[rgba(0,0,0,0.2)];
+}
