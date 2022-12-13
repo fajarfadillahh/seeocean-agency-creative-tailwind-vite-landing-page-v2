@@ -73,7 +73,7 @@
       <section class="home section">
         <div class="home__container container grid gap-12">
           <div
-            class="home__data grid gap-8 justify-self-center text-center xs:w-[400px]"
+            class="home__data grid gap-8 justify-self-center text-center xs:w-[400px] sm:w-[460px]"
           >
             <div>
               <h1 class="home__title section-title">
@@ -86,11 +86,14 @@
               </p>
             </div>
 
-            <form action="" class="home__form flex flex-col gap-4">
+            <form
+              action=""
+              class="home__form flex flex-col gap-4 sm:w-[420px] sm:mx-auto sm:flex-row sm:items-center"
+            >
               <input
                 type="email"
                 placeholder="Enter Email Address"
-                class="home__form-input w-full h-[52px] border-2 border-solid border-gray-300 rounded-lg text-center text-[15px] text-slate-900 font-bold placeholder:font-reguler"
+                class="home__form-input w-full h-[52px] border-2 border-solid border-gray-300 rounded-lg text-center text-[15px] text-slate-900 font-bold placeholder:font-reguler sm:px-6 sm:text-left"
               />
               <button class="home__form-button button-fill" type="submit">
                 Subscribe
@@ -98,7 +101,9 @@
             </form>
 
             <div class="home__sponsored flex justify-center items-center gap-4">
-              <p class="home__sponsored-text text-[12px] text-slate-600">
+              <p
+                class="home__sponsored-text text-[12px] text-slate-600 sm:text-[15px]"
+              >
                 Sponsored by:
               </p>
 
@@ -106,17 +111,17 @@
                 <img
                   src="./src/img/home-sponsored-(1).svg"
                   alt=""
-                  class="home__sponsored-img w-[65px]"
+                  class="home__sponsored-img w-[65px] sm:w-[75px]"
                 />
                 <img
                   src="./src/img/home-sponsored-(2).svg"
                   alt=""
-                  class="home__sponsored-img w-[65px]"
+                  class="home__sponsored-img w-[65px] sm:w-[75px]"
                 />
                 <img
                   src="./src/img/home-sponsored-(3).svg"
                   alt=""
-                  class="home__sponsored-img w-[65px]"
+                  class="home__sponsored-img w-[65px] sm:w-[75px]"
                 />
               </div>
             </div>
@@ -125,7 +130,7 @@
           <img
             src="./src/img/home-image.png"
             alt=""
-            class="home__img justify-self-center xs:w-[400px]"
+            class="home__img justify-self-center xs:w-[400px] sm:w-[460px]"
           />
         </div>
       </section>
