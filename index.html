@@ -78,9 +78,11 @@
     <main class="overflow-hidden">
       <!-- ===== HOME SECTION ===== -->
       <section class="home section">
-        <div class="home__container container grid gap-12">
+        <div
+          class="home__container container grid gap-12 lg:grid-cols-2 lg:items-center"
+        >
           <div
-            class="home__data grid gap-8 justify-self-center text-center xs:w-[400px] sm:w-[460px]"
+            class="home__data grid gap-8 justify-self-center text-center xs:w-[400px] sm:w-[460px] lg:w-auto lg:text-left lg:justify-self-start"
           >
             <div>
               <h1 class="home__title section-title">
@@ -95,7 +97,7 @@
 
             <form
               action=""
-              class="home__form flex flex-col gap-4 sm:w-[420px] sm:mx-auto sm:flex-row sm:items-center"
+              class="home__form flex flex-col gap-4 sm:w-[420px] sm:mx-auto sm:flex-row sm:items-center lg:m-0"
             >
               <input
                 type="email"
@@ -107,7 +109,9 @@
               </button>
             </form>
 
-            <div class="home__sponsored flex justify-center items-center gap-4">
+            <div
+              class="home__sponsored flex justify-center items-center gap-4 lg:justify-start"
+            >
               <p
                 class="home__sponsored-text text-[12px] text-slate-600 sm:text-[15px]"
               >
@@ -137,7 +141,7 @@
           <img
             src="./src/img/home-image.png"
             alt=""
-            class="home__img justify-self-center xs:w-[400px] sm:w-[460px]"
+            class="home__img justify-self-center xs:w-[400px] sm:w-[460px] lg:w-auto"
           />
         </div>
       </section>
