@@ -50,3 +50,8 @@
 .header.sticky-action {
   @apply shadow-[0_8px_12px_rgba(0,0,0,0.1)];
 }
+
+/* ===== ::SELECTION ===== */
+::selection {
+  @apply bg-rose-500 text-white;
+}
