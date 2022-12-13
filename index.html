@@ -16,12 +16,25 @@
       rel="stylesheet"
     />
 
+    <!-- On page load or when changing themes, best to add inline in `head` to avoid FOUC -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+
     <!-- 🌙 ☀️ -->
   </head>
-  <body class="font-text font-reguler">
+  <body class="font-text font-reguler dark:bg-slate-900">
     <!-- ===== HEADER SECTION ===== -->
     <header
-      class="header fixed w-full top-0 left-0 bg-white z-50 transition-all duration-300"
+      class="header fixed w-full top-0 left-0 bg-white z-50 transition-all duration-300 dark:bg-slate-900"
       id="header"
     >
       <div
@@ -29,7 +42,7 @@
       >
         <a
           href="#"
-          class="header__logo inline-flex items-center text-[22px] text-slate-900 font-title"
+          class="header__logo inline-flex items-center text-[22px] text-slate-900 font-title dark:text-white"
         >
           <img
             src="./src/img/icon.svg"
@@ -57,7 +70,12 @@
             class="header__theme absolute top-8 right-8 text-[1.5rem] cursor-pointer md:static"
             id="theme-toggle"
           >
-            <span class="header__theme-icon" id="themeToggleDarkMode">🌙</span>
+            <span class="header__theme-icon hidden" id="themeToggleDarkIcon"
+              >☀️</span
+            >
+            <span class="header__theme-icon hidden" id="themeToggleLightIcon"
+              >🌙</span
+            >
           </div>
 
           <a href="#" class="header__button button-outline mt-6 md:mt-0"
@@ -66,7 +84,7 @@
         </div>
 
         <div
-          class="header__toggle inline-flex text-[1.5rem] text-slate-900 cursor-pointer md:hidden"
+          class="header__toggle inline-flex text-[1.5rem] text-slate-900 cursor-pointer md:hidden dark:text-white"
           id="header-toggle"
         >
           <i class="bx bx-grid-alt"></i>
@@ -88,7 +106,7 @@
               <h1 class="home__title section-title">
                 A Creative way to grow your Exciting Business model
               </h1>
-              <p class="home__text section-text pb-0">
+              <p class="home__text section-text pb-0 xl:w-[450px]">
                 Get your blood tests delivered at let home collect sample from
                 the victory of the managments that supplies best design system
                 guidelines ever.
@@ -97,12 +115,12 @@
 
             <form
               action=""
-              class="home__form flex flex-col gap-4 sm:w-[420px] sm:mx-auto sm:flex-row sm:items-center lg:m-0"
+              class="home__form flex flex-col gap-4 sm:w-[420px] sm:mx-auto sm:flex-row sm:items-center lg:m-0 xl:w-[450px]"
             >
               <input
                 type="email"
                 placeholder="Enter Email Address"
-                class="home__form-input w-full h-[52px] border-2 border-solid border-gray-300 rounded-lg text-center text-[15px] text-slate-900 font-bold placeholder:font-reguler sm:px-6 sm:text-left"
+                class="home__form-input w-full h-[52px] border-2 border-solid border-gray-300 rounded-lg text-center text-[15px] text-slate-900 font-bold placeholder:font-reguler sm:px-6 sm:text-left dark:bg-slate-800 dark:border-0 dark:text-white"
               />
               <button class="home__form-button button-fill" type="submit">
                 Subscribe
@@ -113,7 +131,7 @@
               class="home__sponsored flex justify-center items-center gap-4 lg:justify-start"
             >
               <p
-                class="home__sponsored-text text-[12px] text-slate-600 sm:text-[15px]"
+                class="home__sponsored-text text-[12px] text-slate-600 sm:text-[15px] dark:text-white"
               >
                 Sponsored by:
               </p>
@@ -122,17 +140,17 @@
                 <img
                   src="./src/img/home-sponsored-(1).svg"
                   alt=""
-                  class="home__sponsored-img w-[65px] sm:w-[75px]"
+                  class="home__sponsored-img w-[65px] sm:w-[75px] xl:w-auto"
                 />
                 <img
                   src="./src/img/home-sponsored-(2).svg"
                   alt=""
-                  class="home__sponsored-img w-[65px] sm:w-[75px]"
+                  class="home__sponsored-img w-[65px] sm:w-[75px] xl:w-auto"
                 />
                 <img
                   src="./src/img/home-sponsored-(3).svg"
                   alt=""
-                  class="home__sponsored-img w-[65px] sm:w-[75px]"
+                  class="home__sponsored-img w-[65px] sm:w-[75px] xl:w-auto"
                 />
               </div>
             </div>

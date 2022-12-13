@@ -13,10 +13,10 @@
     @apply pt-32 pb-16;
   }
   .section-title {
-    @apply font-title text-[28px] text-slate-900 pb-4 md:text-[36px] lg:text-[42px];
+    @apply font-title text-[28px] text-slate-900 pb-4 md:text-[36px] lg:text-[42px] xl:text-[56px] dark:text-white;
   }
   .section-text {
-    @apply text-[15px] text-slate-600 leading-text pb-8;
+    @apply text-[15px] text-slate-600 leading-text pb-8 dark:text-white;
   }
 
   /* button class */
@@ -36,11 +36,11 @@
 /* ===== HEADER SECTION ===== */
 @media screen and (max-width: 768px) {
   .header__menu {
-    @apply fixed w-full top-24 left-0 py-8 px-16 text-center bg-white transition-all duration-300 opacity-0 scale-y-0 origin-top;
+    @apply fixed w-full top-24 left-0 py-8 px-16 text-center bg-white transition-all duration-300 opacity-0 scale-y-0 origin-top dark:bg-slate-900;
   }
 }
 .header__link {
-  @apply text-[15px] text-slate-600 hover:text-rose-500;
+  @apply text-[15px] text-slate-600 hover:text-rose-500 dark:text-white dark:hover:text-rose-500;
 }
 /* show menu */
 .header__menu.show-menu {
